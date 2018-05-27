@@ -3,9 +3,9 @@ import EvergagePersonalize, { PersonalizeTypes } from "react-evergage-personaliz
 
 //PersonalizeTypes.Product (Product level recommendations) is the only recommendation type available right now 
 
-export const EvergageRecommendations = () => {
+export const EvergageRecommendations = (props) => {
     return (  
-        <EvergagePersonalize type={PersonalizeTypes.Product} campaign="Homepage Recs" render={({keys, items}) => {
+        <EvergagePersonalize type={PersonalizeTypes.Product} campaign={props.campaignName} render={({keys, items}) => {
 
             //keys are the unique identifiers of the recommended products
             //items are the items themselves. Available data will be based on what the item block you have chosen pulls in. The more data it gets the more you get.
