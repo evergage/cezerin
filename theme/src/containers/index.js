@@ -3,7 +3,7 @@ import HomeSlider from '../components/homeSlider';
 import MetaTags from '../components/metaTags';
 import { themeSettings } from '../lib/settings';
 import { EvergageRecommendations } from "./evergageRecommendations";
-import { EvergageRecommendationsWithAdmc } from "./evergageRecommendationsWithAdmc";
+import { EvergageRecommendationsWithAdmc } from "../components/evergageRecommendationsWithAdmc";
 const Fragment = React.Fragment;
 
 const IndexContainer = (props) => {

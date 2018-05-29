@@ -85,7 +85,6 @@
     "react-dom": "^16.2.0",
     "react-dropzone": "^4.2.9",
     "react-evergage-ab": "^2.2.5",
-    "react-evergage-personalize": "^2.1.2",
     "react-helmet": "^5.2.0",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
@@ -111,5 +110,8 @@
   "engines": {
     "node": "^8.0.0",
     "npm": "^5.0.0"
+  },
+  "devDependencies": {
+    "react-evergage-personalize": "^2.1.2"
   }
 }
