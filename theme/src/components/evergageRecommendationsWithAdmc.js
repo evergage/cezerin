@@ -1,6 +1,9 @@
 import React from 'react';
 import EvergagePersonalize, { PersonalizeTypes } from "react-evergage-personalize";
 
+
+const domIsAccessible = typeof window !== "undefined";
+const evergageHasLoaded = typeof Evergage !== "undefined";
 export class EvergageRecommendationsWithAdmc extends React.Component{
 
   constructor(){
@@ -14,7 +17,9 @@ export class EvergageRecommendationsWithAdmc extends React.Component{
   }
 
   componentDidMount(){
-    window.Evergage.addExperienceListener(this.handleExperienceResponse);
+    if(domIsAccessible &&  evergageHasLoaded){
+      window.Evergage.addExperienceListener(this.handleExperienceResponse);
+    }
   }
 
   handleExperienceResponse(statId, statType, message){
