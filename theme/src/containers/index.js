@@ -1,9 +1,9 @@
-import React from 'react'
-import { themeSettings, text } from '../lib/settings'
-import MetaTags from '../components/metaTags'
-import CategoryGallery from '../components/categoryGallery'
-import CustomProducts from '../components/products/custom'
-import HomeSlider from '../components/homeSlider'
+import React from 'react';
+import HomeSlider from '../components/homeSlider';
+import MetaTags from '../components/metaTags';
+import { themeSettings } from '../lib/settings';
+import { EvergageRecommendations } from "./evergageRecommendations";
+import { EvergageRecommendationsWithAdmc } from "../components/evergageRecommendationsWithAdmc";
 const Fragment = React.Fragment;
 
 const IndexContainer = (props) => {
@@ -35,15 +35,23 @@ const IndexContainer = (props) => {
       }
 
       <section className="section">
+      <div className="container">
+          <div className="title is-4 has-text-centered">Evergage Beacon Replaced Content Recommendations</div>
+          <div id="recommendations-test"></div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container">
-          <div className="title is-4 has-text-centered">{themeSettings.home_products_title}</div>
-          <CustomProducts
-            sku={themeSettings.home_products_sku}
-            sort={themeSettings.home_products_sort}
-            limit={themeSettings.home_products_limit}
-            settings={settings}
-            addCartItem={addCartItem}
-          />
+          <div className="title is-4 has-text-centered">Evergage React Static Component Recommendations</div>
+          <EvergageRecommendations campaignName="Recommendations Testing" />
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="title is-4 has-text-centered">Evergage React Dynamic Rendered Content Component Recommendations</div>
+          <EvergageRecommendationsWithAdmc campaignName="Recommendations Testing" />
         </div>
       </section>
 
